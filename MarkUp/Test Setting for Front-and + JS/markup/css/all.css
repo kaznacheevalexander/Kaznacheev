@@ -1,0 +1,1005 @@
+@font-face {
+    font-family: 'helveticaneuecyrroman';
+    src: url('helveticaneuecyr-roman-webfont.eot');
+    src: url('helveticaneuecyr-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneuecyr-roman-webfont.woff2') format('woff2'),
+         url('helveticaneuecyr-roman-webfont.woff') format('woff'),
+         url('helveticaneuecyr-roman-webfont.ttf') format('truetype'),
+         url('helveticaneuecyr-roman-webfont.svg#helveticaneuecyrroman') format('svg');
+}
+@font-face {
+    font-family: 'helveticaneuecyrthin';
+    src: url('../fonts/helveticaneuecyr-thin-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-thin-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-thin-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneuecyr-thin-webfont.svg#helveticaneuecyrthin') format('svg');
+}
+@font-face {
+    font-family: 'helveticaneuecyrbold';
+    src: url('helveticaneuecyr-bold-webfont.eot');
+    src: url('helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneuecyr-bold-webfont.woff2') format('woff2'),
+         url('helveticaneuecyr-bold-webfont.woff') format('woff'),
+         url('helveticaneuecyr-bold-webfont.ttf') format('truetype'),
+         url('helveticaneuecyr-bold-webfont.svg#helveticaneuecyrbold') format('svg');
+}
+@font-face {
+    font-family: 'helveticaneuecyrthin_italic';
+    src: url('../fonts/helveticaneuecyr-thinitalic-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-thinitalic-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-thinitalic-webfont.ttf') format('truetype'),
+         url('../fonts/helveticaneuecyr-thinitalic-webfont.svg#helveticaneuecyrthin_italic') format('svg');
+}
+* {max-height: 10000px;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+input [type="email"], input [type="tel"], input[type="search"], input[type="text"], input[type="password"], input[type="file"], input[type="submit"], textarea{-webkit-appearance:none;}
+ul,ol{
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ 
+body {
+    color:#333;
+    font:12px/15px 'helveticaneuecyrroman', Helvetica, Arial, sans-serif;
+    background:#fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: none;
+}
+a{
+    text-decoration: none;
+    color:#fe372f;
+}
+#wrapper{
+    overflow: hidden;
+    max-width: 1680px;
+    min-width: 960px;
+}
+#header{
+    background:url(../images/bg-header.jpg);
+    padding: 8px 2%;
+    min-height: 100px;
+}
+.container{
+    max-width: 1680px;
+    margin: 0 auto;
+}
+.logo{
+    float:left;
+    margin: 0 1% 0 0;
+}
+mark{
+    color: #ca3e38;
+    background: none;
+}
+.description{
+    float: left;
+    font: 18px/20px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    padding: 38px 0 0;
+}
+#nav{
+    float: right;
+    font:26px/28px 'helveticaneuecyrthin', Helvetica, sans-serif;
+}
+#nav ul{
+    padding: 31px 0 0;
+    margin: 0;
+    list-style: none;
+    float: right;
+}
+#nav ul li{
+    padding: 0 33px;
+    float: left;
+    position: relative;
+}
+#nav>ul>li:after{
+    content:"";
+    position: absolute;
+    bottom: -10px;
+    width: 36px;
+    height: 1px;
+    background: #ca3e38;
+    left: 50%;
+    margin: 0 0 0 -18px;
+    z-index: 101;
+}
+#nav ul li a{
+    color: #000;
+}
+#nav>ul>li:hover>a,
+#nav ul li a:hover,
+#nav ul li.active a{color:#810500;}
+#nav ul li .drop{
+    display: none;
+    font-style: 24px;
+    line-height: 48px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background:url(../images/bg-header.jpg);
+    padding: 20px 0 0;
+    text-align: center;
+    z-index: 100;
+}
+#nav ul li .drop ul{box-shadow: 2px 8px 7px rgba(0, 0, 0, 0.15);}
+#nav ul li:hover .drop{display: block;}
+#nav ul li .drop ul li{
+    padding: 0;
+    width: 100%; 
+}
+#nav ul li .drop a{display: block;}
+#nav ul li .drop a:hover{
+    color:#000;
+    background: #cecece;
+    background: rgba(0, 0, 0, 0.1);
+}
+#main{margin: 0 0 80px;}
+.info-section{
+    background: url(../images/bg-info.jpg) 0 50% ;
+    background-size: cover;
+    position: relative;
+    padding: 90px 40px;
+}
+.info-box{
+    max-width: 1150px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contact-box{
+    position: absolute;
+    top:100px;
+    right: -4px;
+    width: 22%;
+    padding: 20px 1% 20px 8%; 
+    border:1px solid #fff;
+    background: transparent;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+.contact-box .title{
+    color: #000;
+    margin: 0 0 17px;
+    display: block;
+    font: 16px/21px 'helveticaneuecyrroman', Helvetica, sans-serif;
+}
+.contact-box .social{
+    list-style: none;
+    margin: 0 0 20px;
+    padding: 0;
+    overflow: hidden;
+}
+.contact-box .social li{
+    float: left;
+    text-indent: -9999px;
+    margin: 0 16px 0 0;
+}
+.contact-box .social li:after{background: none;}
+.contact-box .facebook{
+    background: url(../images/sprite.png) 0px 0px;
+    width: 28px;
+    height: 28px;
+}
+.contact-box .google{
+    background: url(../images/sprite.png) -44px 0px ;
+}
+.contact-box .liveinternet{
+    background: url(../images/sprite.png) -89px 0px;
+}
+.contact-box .vk{
+    background: url(../images/sprite.png) -138px 0px;
+    width: 30px;
+    height: 30px;
+}
+.contact-box a{
+    display: block;
+    width: 34px;
+    height: 33px;
+}
+.contact-box .tel{
+    font: 22px/22px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    position: relative;
+}
+.contact-box .tel:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -32px;
+    background: url(../images/sprite.png) 0px -40px;
+    height: 20px;
+    width: 20px;
+}
+.info-section .heading{
+    color: #fff;
+    font: 106px/103px 'helveticaneuecyrbold', Helvetica, sans-serif;
+    display: block;
+    margin: 0 0 70px;
+}
+.info-box .holder{
+    font:16px/21px 'helveticaneuecyrthin', Helvetica, sans-serif;
+    float: right;
+    width: 50%;
+    padding: 0 3%;
+    color: #fff;
+}
+.info-box .holder:first-child{
+    width: 30%;
+    float: left;
+}
+.info-section .info-box .holder{width: 40%;}
+.info-section .info-box .holder:first-child{width: 40%;}
+.info-section h1{
+    margin: 0 0 33px;
+    font: 36px/36px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    color: #810500;
+}
+.info-section h2{
+    margin: 0 0 33px;
+    font: 21px/21px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    color: #810500;
+}
+.info-section ul li{
+    margin: 0 0 28px;
+    position: relative;
+}
+.info-section ul li:after{
+    content:"";
+    position: absolute;
+    top: 10px;
+    left: -16px;
+    background: #fff;
+    width: 3px;
+    height: 3px
+}
+.info-section ol{
+    counter-reset: newCounter;
+}
+.info-section ol li {
+    padding:0 0 0 25px;
+    margin: 0 0 30px;
+    position: relative;
+}
+.info-section ol li:before{
+    content: counters(newCounter,".") " ";
+    counter-increment: newCounter;
+    float:left;
+    margin:0 0 0 -25px;
+    color:#f00;
+}
+.gellery {
+    position: relative;
+    height: auto;
+    margin: 0 0 49px;
+}
+.gellery .slide {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+.gellery .slide.active {
+    z-index: 2;
+}
+.gellery img{
+    height: auto;
+    width: 100%;
+}
+.gellery .btn-prev,
+.gellery .btn-next{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    background: url(../images/sprite.png) 0px -72px;
+    height: 82px;
+    width: 24px;
+    margin: -41px 0 0;
+    z-index: 3;
+    text-indent: -9999px;
+}
+.gellery .btn-next{
+    background: url(../images/sprite.png) -51px -72px;
+    left: auto;
+    right: 6%;
+}
+.gellery .title{
+    position: absolute;
+    top: 10%;
+    left: 100px;
+    text-indent: -9999px;
+    background: url(../images/gallery-text.png);
+    width: 351px;
+    height: 140px;
+}
+.info-box h3{
+    color: #fe372f;
+    margin: 0 0 30px;
+    font: 36px/38px 'helveticaneuecyrthin', Helvetica, sans-serif;
+}
+.entry-form{
+    font: 14px/19px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    color:#000;
+}
+.entry-form .row{
+    overflow: hidden;
+    margin: 0 0 18px;
+}
+.entry-form lable,
+.entry-form  h4{
+    display: block;
+    margin: 0 0 9px;
+    font-weight: normal;
+}
+.entry-form .area{
+    overflow: hidden;
+}
+.entry-form .area lable{
+    float: left;
+    margin: 2px 0 8px;
+}
+.entry-form input[type="text"]{
+    padding: 0;
+    background: #fff;
+    border: 1px solid #999;
+    width: 255px;
+    height: 36px;
+    padding: 0 10px; 
+    font: 21px/36px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    outline: none;
+}
+.entry-form .box{
+    overflow: hidden;
+}
+.entry-form .box .row{
+    width: 130px;
+    float: left;
+}
+.entry-form .box .row:first-child{
+    margin: 0 19px 0 0;
+}
+.entry-form .box .row input[type="text"]{
+    width: 107px;
+}
+.entry-form .select-box{
+    overflow: hidden;
+    border: 1px solid #810500;
+    width: 128px;
+    height: 36px;
+}
+.entry-form select{
+    float: left;
+    width: 60px;
+}
+.entry-form .area.change-color{
+    color:#666;
+    margin: 0 0 29px;
+}
+.entry-form .btn{
+    border: 0;
+    width: 275px;
+    height: 41px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    font: 24px/35px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    background: #fe5f5a;
+    background: -webkit-linear-gradient(#fe5f5a 0%, #fe3830 100%);
+    background: -o-linear-gradient(#fe5f5a 0%, #fe3830 100%);
+    background: linear-gradient(#fe5f5a 0%, #fe3830 100%);
+}
+.entry-form .btn:after{
+    content:"";
+    position: absolute;
+    background: url(../images/sprite.png) -90px -37px;
+    width: 27px;
+    height: 15px;
+    top: 12px;
+    left: 18px;
+}
+/* hide original element */
+.jcf-hidden {
+    display: block !important;
+    position: absolute !important;
+    left: -9999px !important; /* change to right: -9999px on RTL sites */
+}
+/* custom checkbox styles */
+.chk-area {
+    border: 1px solid #999;
+    margin: 0 10px 0 0;
+    float: left;
+    width: 22px;
+    height: 22px;
+}
+.chk-checked{
+    position: relative;
+    background: #fff;
+}
+.chk-checked:after{
+    content:"";
+    position: absolute;
+    top: 7px;
+    left: 4px;  
+    background: url(../images/sprite.png) -132px -41px;
+    width: 15px;
+    height: 11px;
+}
+.chk-disabled {
+    background: #eee;
+}
+.jcf-label-disabled {
+    color: #ccc;
+}
+/* custom radio styles */
+.rad-area {
+    border: 0;
+    background: url(../images/sprite.png) -1px -198px;
+    margin: 0 10px 0 0;
+    float: left;
+    width: 22px;
+    height: 22px;
+}
+.rad-checked {
+    background: url(../images/sprite.png) -1px -168px;
+}
+.rad-focus {
+    border-color: #f00;
+}
+.rad-disabled {
+    background: #eee;
+}
+
+/* custom select styles */
+.select-area {
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    height: 36px;
+    line-height: 36px;
+    font-size: 21px;
+    float: left;
+}
+.select-focus {
+    border-color: #f00;
+}
+.select-area .center {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    padding: 0 0 0 10px;
+}
+.select-disabled {
+    background: #eee;
+}
+.select-area .select-opener {
+    background: url(../images/sprite.png) -43px -43px;
+    position: absolute;
+    height: 11px;
+    width: 22px;
+    right: 0;
+    top: 50%;
+    margin: -6px 0 0;
+}
+.select-options {
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    z-index: 2000;
+}
+.select-options .opt-disabled a {
+    background: #fff !important;
+    color: #aaa !important;
+}
+.select-options .drop-holder {
+    border: 1px solid #810500;
+    overflow: hidden;
+    height: 1%;
+}
+.select-options ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.select-options ul li {
+    width: 100%;
+    float: left;
+}
+.select-options ul a {
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    cursor: default;
+    color: #000;
+    height: 1%;
+}
+.select-options .item-selected a {
+    text-decoration: none;
+    background: #810500;
+    color: #fff;
+}
+/* select options optgroup example styles */
+.select-options .optgroup {
+    clear: both;
+}
+.select-options .optgroup strong {
+    display: block;
+    padding: 5px;
+}
+.select-options .optgroup ul a {
+    padding-left: 30px;
+}
+.gellery-cite{
+    font: 18px/21px 'helveticaneuecyrroman', Helvetica, sans-serif;
+    position: relative;
+    color:#666;
+}
+.gellery-cite .mask {
+    position: relative;
+    overflow: hidden;
+    width: 554px;
+}
+.gellery-cite .mask .slideset {
+    width: 99999px;
+    float: left;
+}
+.gellery-cite .mask .slide {
+    width: 554px;
+    float: left;
+}
+.gellery-cite blockquote{overflow: hidden;}
+.gellery-cite  q{
+    float: right;
+    width: 240px;
+    padding:28px 30px; 
+    border: 1px solid #999;
+    position: relative;
+    font: 24px/24px 'helveticaneuecyrthin_italic', Helvetica, sans-serif;
+}
+.gellery-cite  q:after{
+    content:"";
+    position: absolute;
+    bottom: -27px;
+    left: -12px;
+    background: url(../images/sprite.png) -97px -74px;
+    width: 39px;
+    height: 27px;
+}
+.gellery-cite  q .text{
+    position: relative;
+}
+.gellery-cite  q .text:before,
+.gellery-cite  q .text:after{
+    content:"";
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../images/sprite.png) -43px -168px;
+    width: 20px;
+    height: 17px;
+    margin: 0 6px 0 0;
+}
+.gellery-cite  q .text:after{
+    background: url(../images/sprite.png) -83px -168px;
+    margin: 0 0 0 6px;
+}
+.gellery-cite cite{
+    float: left;
+    width: 219px;
+} 
+.gellery-cite img{
+    border: 1px solid #999;
+    margin: 0 0 14px;
+}
+.gellery-cite p{margin: 0;}
+.gellery-cite .pagination{
+    position: absolute;
+    bottom: 15px;
+    right: 10%;
+}
+.gellery-cite .pagination li{
+    float: left;
+    margin: 0 3px;
+}
+.gellery-cite .pagination a{
+    background: #666;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: block;
+}
+.gellery-cite .pagination a:hover,
+.gellery-cite .pagination li.active a{
+    background: #fe5f5a;
+    background: -webkit-linear-gradient(#fe5f5a 0%, #fe3830 100%);
+    background: -o-linear-gradient(#fe5f5a 0%, #fe3830 100%);
+    background: linear-gradient(#fe5f5a 0%, #fe3830 100%);
+}
+#footer{
+    background: #000;
+    color:#fff;
+    padding: 20px 2%; 
+    font: 12px/26px 'helveticaneuecyrroman', Helvetica, sans-serif;
+}
+#footer .container{overflow: hidden;}
+#footer .copy{
+    float: left;
+}
+#footer .create{
+    float: right;
+    position: relative;
+    color:#fff;
+    text-decoration: underline;
+    padding: 0 40px 0 0;
+}
+#footer .create:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/sprite.png) -99px -109px;
+    width: 26px;
+    height: 26px;
+}
+.ui-datepicker-trigger{
+    outline: none;
+    background: none;
+    padding: 0;
+    position: absolute;
+    left: 10px;
+    top: -2px;
+    z-index: 10;
+    height: 18px;
+    width: 18px;
+    border:0;
+}
+#ui-datepicker-div{
+    width: 200px;
+    background: #fff;
+    border: 1px solid #fe372f;
+}
+/*! jQuery UI - v1.11.4 - 2015-10-27
+* http://jqueryui.com
+* Includes: core.css, datepicker.css, slider.css, theme.css
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana%2CArial%2Csans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=cccccc&bgTextureHeader=highlight_soft&bgImgOpacityHeader=75&borderColorHeader=aaaaaa&fcHeader=222222&iconColorHeader=222222&bgColorContent=ffffff&bgTextureContent=flat&bgImgOpacityContent=75&borderColorContent=aaaaaa&fcContent=222222&iconColorContent=222222&bgColorDefault=e6e6e6&bgTextureDefault=glass&bgImgOpacityDefault=75&borderColorDefault=d3d3d3&fcDefault=555555&iconColorDefault=888888&bgColorHover=dadada&bgTextureHover=glass&bgImgOpacityHover=75&borderColorHover=999999&fcHover=212121&iconColorHover=454545&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=aaaaaa&fcActive=212121&iconColorActive=454545&bgColorHighlight=fbf9ee&bgTextureHighlight=glass&bgImgOpacityHighlight=55&borderColorHighlight=fcefa1&fcHighlight=363636&iconColorHighlight=2e83ff&bgColorError=fef1ec&bgTextureError=glass&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=aaaaaa&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+* Copyright 2015 jQuery Foundation and other contributors; Licensed MIT */
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+  display: none; }
+
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none; }
+
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse; }
+
+.ui-helper-clearfix:after {
+  clear: both; }
+
+.ui-helper-clearfix {
+  min-height: 0;
+  /* support: IE7 */ }
+
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity=0);
+  /* support: IE8 */ }
+
+.ui-front {
+  z-index: 100; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+  cursor: default !important; }
+
+/* Icons
+----------------------------------*/
+/* states and images */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat; }
+
+/* Misc visuals
+----------------------------------*/
+/* Overlays */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.ui-datepicker {
+  width: 100%;
+  padding: 2px 2px 0;
+  display: none; }
+
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0; }
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    background: url(../images/sprite.png) -43px -168px;
+    position: absolute;
+    top: 7px;
+    width: 1.8em;
+    height: 1.8em; }
+
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+    cursor: pointer;}
+
+.ui-datepicker .ui-datepicker-prev {
+    left: 7px; }
+
+.ui-datepicker .ui-datepicker-next {
+    background: url(../images/sprite.png) -83px -168px;
+    right: 2px; }
+
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 6px; }
+
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 1px; }
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 50%;
+  margin-top: -8px; }
+
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center; }
+
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0; }
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 45%; }
+
+.ui-datepicker table {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+  margin: 0 0 0.4em; }
+
+.ui-datepicker th {
+  padding: 0.7em 0.3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0; }
+
+.ui-datepicker td {
+  border: 0;
+  padding: 1px; }
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  padding: .2em;
+  text-align: right;
+  text-decoration: none; }
+
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: .7em 0 0 0;
+  padding: 0 0.2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0; }
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: 0.5em 0.2em 0.4em;
+  cursor: pointer;
+  padding: 0.2em 0.6em 0.3em 0.6em;
+  width: auto;
+  overflow: visible; }
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+  width: auto; }
+
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left; }
+
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto 0.4em; }
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%; }
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%; }
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%; }
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0; }
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left; }
+
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0; }
+
+/* RTL support */
+.ui-datepicker-rtl {
+  direction: rtl; }
+
+.ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+  right: 1px;
+  left: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 1px;
+  right: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+  float: right; }
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px; }
+
+.ui-slider {
+  position: relative;
+  text-align: left; }
+
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none; }
+
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  background-position: 0 0; }
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
+          filter: inherit; }
+
+.ui-slider-horizontal {
+  height: .8em; }
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.3em;
+  margin-left: -.6em; }
+
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%; }
+
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0; }
+
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0; }
+
+.ui-slider-vertical {
+  width: .8em;
+  height: 100px; }
+
+.ui-slider-vertical .ui-slider-handle {
+  left: -.3em;
+  margin-left: 0;
+  margin-bottom: -.6em; }
+
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%; }
+
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0; }
+
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0; }
+  @media only screen and (max-width: 1170px){
+    #nav ul li{padding: 0 11px;}
+}
