@@ -1,0 +1,29 @@
+*+html body{min-width:980px;}
+*+html #nav > li{
+	float:left;
+	vertical-align:top;
+}
+*+html #nav > li > .link > a{padding:0 24px;}
+#nav > li:hover > .link > a.has-drop-down-a,
+#nav > li.hover > .link > a.has-drop-down-a{padding:0 24px 7px;}
+*+html .content .link a,
+*+html .content blockquote,
+*+html .top a,
+*+html .vergleiche .more,
+*+html .service-list a,
+*+html .columns .heading,
+*+html .columns .vergleiche .heading,
+*+html .columns .news .heading,
+*+html .columns .ratgeber .heading,
+*+html .columns .service .heading,
+*+html .accordion .more{z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterBegin', '<span class="before">' + '<span/>'));}
+*+html .ad li,
+*+html .radio label,
+*+html .vergleiche .block,
+*+html .ratgeber .block{display:inline;}
+*+html .widget{margin:0;}
+*+html .radio input[type="radio"]{margin:3px 3px 0 0;}
+*+html .news{
+	overflow:hidden;
+	position:relative;
+}

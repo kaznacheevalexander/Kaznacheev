@@ -1,0 +1,43 @@
+html, body, header, p, h1, img,{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+p{
+	margin: 0 0 83px 0;
+}
+body{
+	color: #fff;
+	font: 60px/63px ;
+	text-align: center;	
+}
+.wrapper{
+	background: url(../image/background.jpg);
+	border: 75px solid #fff;
+	text-align: center;
+	padding: 30px;
+}
+.top{
+	margin: 0 0 70px 0;
+	position: relative;
+}
+h1{
+	color: red;
+	font: 69px/74px "Trebuchet MS", Helvetica, sans-serif;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	width: 130px;
+	margin: -25px -70px 0 0;
+}
+.bottom{
+	background: url(../image/bg.png) no-repeat 50% 0;
+	color: #fff;
+	font-size: 50px;
+	padding: 17px 0 55px 0;
+}
+.title{
+	font-weight: 600;
+	font-family: Trebuchet MS;
+	margin: 50px;
+}
